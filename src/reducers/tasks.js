@@ -10,26 +10,7 @@ if (!TASKS || !TASKS.tasks || !TASKS.tasks.length) {
 }
 
 
-
-const initialState = [
-    {
-        id: 1,
-        text: 'Learn ReactJS',
-        isCompleted: true,
-    },
-    {
-        id: 2,
-        text: 'Learn Redux',
-        isCompleted: false,
-    },
-    {
-        id: 3,
-        text: 'Learn React Router',
-        isCompleted: false,
-    }
-];
-
-export default (state = TASKS.tasks, { type, id, text, isCompleted }) => {
+const addTask = (state = TASKS.tasks, { type, id, text, isCompleted }) => {
     switch (type) {
         case ADD_TASK:
             return [
@@ -55,3 +36,4 @@ export default (state = TASKS.tasks, { type, id, text, isCompleted }) => {
             return state
     }
 }
+export default addTask

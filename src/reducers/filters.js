@@ -10,7 +10,7 @@ if (!TASKS || !TASKS.filters || !TASKS.filters.length) {
 }
 
 
-export default (initialState = TASKS.filters, { type, activeFilter }) => {
+const filterTasks = (initialState = TASKS.filters, { type, activeFilter }) => {
     switch (type) {
         case CHANGE_FILTER:
             return activeFilter;
@@ -20,3 +20,4 @@ export default (initialState = TASKS.filters, { type, activeFilter }) => {
     }
 
 }
+export default filterTasks
