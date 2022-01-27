@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import reducer from './reducers';
 import { save } from 'redux-localstorage-simple';
 
+
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(save({ namespace: 'todo-list' }))))
 
 

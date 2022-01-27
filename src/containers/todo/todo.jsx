@@ -53,6 +53,7 @@ class ToDo extends Component {
     const filteredTask = this.filterTasks(tasks, filters)
     const taskCount = this.getActiveTaskCounter(tasks)
 
+
     return (
       <div className="todo-wrapper">
         <ToDoInput onKeyPress={this.addTask} onChange={this.handleInputChange} value={taskText} />
